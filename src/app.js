@@ -22,7 +22,7 @@ function writeIt(e){
         prof.getProfile(e.target.value)
         .then(data => {
             if(e.target.value.length === 0){
-                console.log("yok");
+                ui.showAlert(e.target.value);
             }        
             else{
                 ui.writeAllProfile(data.userJson[0]);
@@ -30,7 +30,7 @@ function writeIt(e){
             }
            
         })
-        .catch(error => ui.showAlert());
+        .catch(error => ui.showAlert(e.target.value));
     }
  
 }

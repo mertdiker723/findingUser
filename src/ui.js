@@ -56,17 +56,26 @@ export default class UI{
     writeAllTodos(data){
         let html = "";
         data.forEach((val) => {
-            html += `
-            <li class="list-group-item bg-success">
-               ${val.title}                    
-            </li>`;
+            if(val.completed === true){
+                html += `
+                <li class="list-group-item bg-success">
+                   ${val.title}                    
+                </li>`;
+            }
+            else{
+                html += `
+                <li class="list-group-item bg-primary">
+                    ${val.title}
+                </li>`;
+            }
+            
         });
 
        this.profileContainer.querySelector("#todo").innerHTML = html;
     }
 
-    showAlert(){
-        this.alert.innerHTML = "Value is not found.";
+    showAlert(text){
+        this.alert.innerHTML = `${text} is not found.`;
     }
 
     clearIt(){
