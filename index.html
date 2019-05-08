@@ -11,16 +11,31 @@
   </head>
   <body>
 
-
-    <nav class="navbar navbar-dark bg-danger mb-3">
+<!-- 
+    <nav class="navbar navbar-dark bg-primary mb-3">
 
         <div class="container">
             <a href="#" class="navbar-brand">
-                Profile Finder
+                Profile Finding Area
             </a>
         </div>   
 
-    </nav>
+    </nav> -->
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">           
+          <div class="bg-dark p-4">
+            <h4 class="text-white">Profile Finding Area</h4>
+            <span class="text-muted">Please insert one of these users↓↓</span><br>
+            <span style="color:cadetblue;">"Bret","Antonette","Samantha","Karianne","Kamren","Leopoldo_Corkery","Elwyn.Skiles","Maxime_Nienow","Delphine","Moriah.Stanton"</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+      <br/>
 
     <div class="container">
         <div class="card">
@@ -29,6 +44,7 @@
                 <p class="lead">
                     Start typing to find a profile
                 </p>
+                
                 <input type="text" id="searchProfile" class="form-control" >
                 <span id="alert" class="bg-danger"></span>
             </div>

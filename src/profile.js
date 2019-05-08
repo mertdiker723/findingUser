@@ -2,6 +2,7 @@ export default class Profile{
     constructor(){
         this.urlUser = "https://jsonplaceholder.typicode.com/users?username=";
         this.urlTodo = "https://jsonplaceholder.typicode.com/todos?userId=";
+        this.urlAlbum = "https://jsonplaceholder.typicode.com/albums?userId=";
     }
 
 
@@ -13,9 +14,15 @@ export default class Profile{
 
         const todoJson = await todo.json();
 
+
+        const album = await fetch(`${this.urlAlbum}`+userJson[0].id);
+
+        const albumJson = await album.json();
+        
         return {
             userJson:userJson,
-            todoJson:todoJson
+            todoJson:todoJson,
+            albumJson:albumJson
         }
     }
 }

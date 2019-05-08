@@ -27,6 +27,7 @@ function writeIt(e){
             else{
                 ui.writeAllProfile(data.userJson[0]);
                 ui.writeAllTodos(data.todoJson);
+                ui.writeAllAlbums(data.albumJson);
             }
            
         })
